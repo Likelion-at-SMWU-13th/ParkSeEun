@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css?family=Kanit:800');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+  width: 100vw;
+  height: 100vh;
+  font-family: 'Kanit', sans-serif;
+  font-weight: 800;
+  overflow: hidden;
+}
+
+ul {
+    height: 100%;
+    width: 100%;
+}
+
+li {
+    height: 100%;
+    width: 100%;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-image: url(./images/mypage_background.png);
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+img {
+  width: auto;
+  height: 100vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#scientist {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-transform: uppercase;
+  font-size: 5rem;
+  line-height: 1.0;
+  text-shadow: 0 0 30px;
+  white-space: nowrap;
+  text-align: center;
+}
