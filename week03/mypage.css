@@ -55,3 +55,90 @@ img {
   white-space: nowrap;
   text-align: center;
 }
+
+img.tarot {
+  width: auto;
+  height: 30vh;
+}
+
+.center {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.card,
+.wrap {
+  position: relative;
+  width: auto;
+  height: 30vh;
+  border-radius: 12px;
+  perspective: 350px;
+}
+
+.wrap {
+  transition: 1.5s;
+  transform-style: preserve-3d;
+}
+
+.card:hover .wrap {
+  transform: rotateX(180deg);
+}
+
+.back,
+.front {
+  position: absolute;
+  width: auto;
+  height: 30vh;
+  border-radius: 12px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: 50% 0;
+  background: #fff;
+  text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.front {
+  z-index: 1;
+}
+
+.back {
+  transform: rotateX(180deg) translate(-50%, -50%);
+}
+
+@-webkit-keyframes driving {
+  0% {
+    margin-top: 5px;
+    transform: scaleY(0.95) skew(1deg);
+  }
+  100% {
+    margin-top: 0px;
+  }
+}
+
+@keyframes driving {
+  0% {
+    margin-top: 5px;
+    transform: scaleY(0.95) skew(1deg);
+  }
+  100% {
+    margin-top: 0px;
+  }
+}
+
+@-webkit-keyframes bottom {
+  100% {
+    right: 300px;
+  }
+}
+
+@keyframes bottom {
+  100% {
+    right: 300px;
+  }
+}
