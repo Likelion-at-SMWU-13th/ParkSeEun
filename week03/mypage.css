@@ -6,7 +6,7 @@ header {
 
 nav {
   position: relative;
-  top: 115px;
+  top: 100px;
   left: calc(100vw - 180px);
 }
 
@@ -89,13 +89,21 @@ img.tarot {
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.7); 
 }
 
+.center-container{
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  gap: 170px;
+}
+
 .center {
-  position: absolute;
-  top: 72%;
-  left: 50%;
+  display: inline-block;
+  position: relative;
+  margin-top: -12%;
   transform: translate(-50%, -50%);
   transition: transform 0.5s ease-out;
 }
+
 
 .center:hover {
   transform: translate(-50%, calc(-50px - 50%));
