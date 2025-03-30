@@ -8,6 +8,12 @@
     <title>mypage</title>
 </head>
 <body>
+  <header>
+    <nav>
+      <a href="mypage.html"><img id="mypage" src="./images/mypage.svg"/></a>
+      <a href="login.html"><img id="logout" src="./images/logout.svg" /></a>
+    </nav>
+  </header>
   <div class="container">
     <ul id="scene">
       <li class="layer" data-depth="1"><img src="https://i.postimg.cc/44LxkHX9/Space-BP.png"/></li>
@@ -20,10 +26,11 @@
   <div class="center">
     <div class="card" id="card">
       <div class="wrap">
-        <div class="front">
+        <div class="front" onclick="flip_Img()">
           <img class="tarot" src="./images/tarot_card.svg">
         </div>
-        <div class="back">
+        <div class="back" onclick="flip_Img()">
+          <span class="back-text">Your Text Here</span>
           <img class="tarot" src="./images/tarot_card_back.svg">
         </div>
       </div>
