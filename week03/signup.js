@@ -6,5 +6,6 @@ function checkPassword() {
         alert("비밀번호가 다릅니다!");
         return false;
     }
-    return true;
+    window.location.href = "./main.html";
+    return false;
 }

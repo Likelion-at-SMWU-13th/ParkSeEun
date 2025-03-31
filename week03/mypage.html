@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="mypage.css" />
+    <title>mypage</title>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="mypage.html"><img id="mypage" src="./images/mypage.svg"/></a>
+      <a href="login.html"><img id="logout" src="./images/logout.svg" /></a>
+    </nav>
+  </header>
+  <div class="container">
+    <ul id="scene">
+      <li class="layer" data-depth="1"><img src="https://i.postimg.cc/44LxkHX9/Space-BP.png"/></li>
+      <li class="layer" data-depth="-1"><img src="./images/planet2.png"/></object></li>
+      <li class="layer" data-depth="2"><img src="./images/planet1.png"/></object></li>
+      <li class="layer" data-depth="0.5"><img src="https://i.postimg.cc/fyrzxp8K/Space-Meteors.png"/></object></li>
+      <li class="layer" data-depth=".1"><span id="scientist">PARK<br>SEEUN</span></li>
+    </ul>
+  </div>
+  <div class="center-container">
+    <div class="center">
+      <div class="card">
+        <div class="wrap">
+          <div class="front" onclick="flip_Img()">
+            <img class="tarot" src="./images/tarot_card.svg">
+          </div>
+          <div class="back" onclick="flip_Img()">
+            <span class="back-text">School</span>
+            <span class="back-text-ex">Sookmyung<br>Woman<br>Univercity</span>
+            <img class="tarot" src="./images/tarot_card_back.svg">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="center">
+      <div class="card">
+        <div class="wrap">
+          <div class="front" onclick="flip_Img()">
+            <img class="tarot" src="./images/tarot_card.svg">
+          </div>
+          <div class="back" onclick="flip_Img()">
+            <span class="back-text">Major</span>
+            <span class="back-text-ex">Information<br>Technology<br>Engineering</span>
+            <img class="tarot" src="./images/tarot_card_back.svg">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="center">
+      <div class="card">
+        <div class="wrap">
+          <div class="front" onclick="flip_Img()">
+            <img class="tarot" src="./images/tarot_card.svg">
+          </div>
+          <div class="back" onclick="flip_Img()">
+            <span class="back-text">Part</span>
+            <span class="back-text-ex">Like-lion<br>Front-end<br>Developer</span>
+            <img class="tarot" src="./images/tarot_card_back.svg">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="center">
+      <div class="card">
+        <div class="wrap">
+          <div class="front" onclick="flip_Img()">
+            <img class="tarot" src="./images/tarot_card.svg">
+          </div>
+          <div class="back" onclick="flip_Img()">
+            <span class="back-text">About</span>
+            <span class="back-text-ex">Park Seeun<br>2003(23)<br>MBTI: INFJ</span>
+            <img class="tarot" src="./images/tarot_card_back.svg">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="center">
+      <div class="card">
+        <div class="wrap">
+          <div class="front" onclick="flip_Img()">
+            <img class="tarot" src="./images/tarot_card.svg">
+          </div>
+          <div class="back" onclick="flip_Img()">
+            <img class="profile" src="./images/profile.jpg">
+            <img class="tarot" src="./images/tarot_card_back.svg">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="mypage.js"></script>
+</body>
+</html>
