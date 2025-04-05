@@ -1,0 +1,109 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/mypage.css' %}" />
+    <style type="text/css">
+      * {
+        cursor: url("{% static 'images/cursor.png' %}") 0.1 0.1, auto;
+      }
+      .container {
+        background-image: url("{% static 'images/mypage_background.png' %}");
+      }
+    </style>
+    <title>mypage</title>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="{% url 'mypage' %}"><img id="mypage" src="{% static 'images/mypage.svg' %}"/></a>
+      <a href="{% url 'logout' %}"><img id="logout" src="{% static 'images/logout.svg' %}" /></a>
+    </nav>
+  </header>
+  <div class="container">
+    <ul id="scene">
+      <li class="layer" data-depth="1"><img src="https://i.postimg.cc/44LxkHX9/Space-BP.png"/></li>
+      <li class="layer" data-depth="-1"><img src="{% static 'images/planet2.png' %}"/></li>
+      <li class="layer" data-depth="2"><img src="{% static 'images/planet1.png' %}"/></li>
+      <li class="layer" data-depth="0.5"><img src="https://i.postimg.cc/fyrzxp8K/Space-Meteors.png"/></li>
+      <li class="layer" data-depth=".1"><span id="scientist">PARK<br>SEEUN</span></li>
+    </ul>
+  </div>
+  <div class="center-container">
+    <div class="center">
+      <div class="card">
+        <div class="wrap">
+          <div class="front" onclick="flip_Img()">
+            <img class="tarot" src="{% static 'images/tarot_card.svg' %}">
+          </div>
+          <div class="back" onclick="flip_Img()">
+            <span class="back-text">School</span>
+            <span class="back-text-ex">Sookmyung<br>Woman<br>Univercity</span>
+            <img class="tarot" src="{% static 'images/tarot_card_back.svg' %}">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="center">
+      <div class="card">
+        <div class="wrap">
+          <div class="front" onclick="flip_Img()">
+            <img class="tarot" src="{% static 'images/tarot_card.svg' %}">
+          </div>
+          <div class="back" onclick="flip_Img()">
+            <span class="back-text">Major</span>
+            <span class="back-text-ex">Information<br>Technology<br>Engineering</span>
+            <img class="tarot" src="{% static 'images/tarot_card_back.svg' %}">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="center">
+      <div class="card">
+        <div class="wrap">
+          <div class="front" onclick="flip_Img()">
+            <img class="tarot" src="{% static 'images/tarot_card.svg' %}">
+          </div>
+          <div class="back" onclick="flip_Img()">
+            <span class="back-text">Part</span>
+            <span class="back-text-ex">Like-lion<br>Front-end<br>Developer</span>
+            <img class="tarot" src="{% static 'images/tarot_card_back.svg' %}">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="center">
+      <div class="card">
+        <div class="wrap">
+          <div class="front" onclick="flip_Img()">
+            <img class="tarot" src="{% static 'images/tarot_card.svg' %}">
+          </div>
+          <div class="back" onclick="flip_Img()">
+            <span class="back-text">About</span>
+            <span class="back-text-ex">Park Seeun<br>2003(23)<br>MBTI: INFJ</span>
+            <img class="tarot" src="{% static 'images/tarot_card_back.svg' %}">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="center">
+      <div class="card">
+        <div class="wrap">
+          <div class="front" onclick="flip_Img()">
+            <img class="tarot" src="{% static 'images/tarot_card.svg' %}">
+          </div>
+          <div class="back" onclick="flip_Img()">
+            <img class="profile" src="{% static 'images/profile.jpg' %}">
+            <img class="tarot" src="{% static 'images/tarot_card_back.svg' %}">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="{% static 'js/mypage.js' %}"></script>
+</body>
+</html>
