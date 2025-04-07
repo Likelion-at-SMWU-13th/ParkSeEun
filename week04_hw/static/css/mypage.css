@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css?family=Kanit:800');
+@import url('https://fonts.googleapis.com/css?family=Kanit:500');
+
+header {
+  display: flex;
+}
+
+nav {
+  position: relative;
+  top: 100px;
+  left: calc(100vw - 180px);
+}
+
+#mypage {
+  width: 35px;
+}
+
+#logout {
+  width: 35px;
+  margin-left: 50px;
+}
+
+* {
+    cursor: url("../images/cursor.png") 0.1 0.1, auto;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+  width: 100vw;
+  height: 100vh;
+  font-family: 'Kanit', sans-serif;
+  font-weight: 800;
+  overflow : hidden;
+}
+
+ul {
+    height: 100%;
+    width: 100%;
+}
+
+li {
+    height: 100%;
+    width: 100%;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  background-image: url("{% static 'images/mypage_background.png' %}");
+  background-attachment: scroll;
+  background-size: cover;
+}
+
+img {
+  width: auto;
+  height: 100vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#scientist {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-transform: uppercase;
+  font-size: 5rem;
+  line-height: 1.0;
+  text-shadow: 0 0 30px;
+  white-space: nowrap;
+  text-align: center;
+}
+
+img.tarot {
+  width: auto;
+  height: 30vh;
+  position: absolute;
+}
+
+img.profile {
+  z-index: 1;
+  border-radius: 10%;
+  width: auto;
+  height: 21vh;
+  position: absolute;
+}
+
+.back .back-text {
+  position: relative; 
+  top : 5%;
+  z-index: 2; 
+  color: rgb(255, 255, 255);
+  font-size: 1.7rem; 
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.7); 
+}
+
+.back-text-ex {
+  position: relative; 
+  top : 17%;
+  z-index: 2; 
+  color: rgb(255, 255, 255);
+  font-size: 0.9rem; 
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.7); 
+  font-family: 'Kanit', sans-serif;
+  font-weight: 500;
+}
+
+.center-container{
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  gap: 180px;
+}
+
+.center {
+  display: inline-block;
+  position: relative;
+  margin-top: -12%;
+  transform: translate(-50%, -50%);
+  transition: transform 0.5s ease-out;
+}
+
+
+.center:hover {
+  transform: translate(-50%, calc(-70px - 50%)) scale(1.3);
+}
+
+.card,
+.wrap {
+  cursor: pointer;
+  position: relative;
+  width: auto;
+  height: 30vh;
+  border-radius: 12px;
+  perspective: 350px;
+}
+
+.wrap {
+  transition: 1.5s;
+  transform-style: preserve-3d;
+}
+
+.card.clicked .wrap {
+  transform: rotateX(180deg);
+}
+
+.back,
+.front {
+  position: absolute;
+  width: auto;
+  height: 20vh;
+  border-radius: 12px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: 50% 0;
+  background: #fff;
+  text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  backface-visibility: hidden;
+}
+
+.front {
+  z-index: 1;
+}
+
+.back {
+  transform: rotateX(180deg) translate(-50%, -50%);
+}
