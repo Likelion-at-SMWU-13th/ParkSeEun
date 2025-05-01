@@ -32,6 +32,9 @@ function handleTodoClick(event) {
     if (target.classList.contains("delete-btn")) {
         target.parentElement.remove();
     }
+    else if (target.tagName === "SPAN") {
+        target.parentElement.classList.toggle("completed");
+    }
 }
 
 todoForm.addEventListener("submit", addTodo);
