@@ -3,7 +3,9 @@ const todoInput = document.getElementById("todo-input");
 const todoList = document.getElementById("todo-list");
 
 function addTodo(event) {
-    const todoText = todoInput.ariaValueMax.trim()
+    event.preventDefault();
+
+    const todoText = todoInput.value.trim()
 
     if (todoText !== ""){
         const todoItem = document.createElement("li");
@@ -23,3 +25,14 @@ function addTodo(event) {
         todoInput.value = "";
     }
 }
+
+function handleTodoClick(event) {
+    const target = event.target;
+
+    if (target.classList.contains("delete-btn")) {
+        target.parentElement.remove();
+    }
+}
+
+todoForm.addEventListener("submit", addTodo);
+todoList.addEventListener("click", handleTodoClick);
