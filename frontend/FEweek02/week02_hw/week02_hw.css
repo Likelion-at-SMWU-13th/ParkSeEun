@@ -1,13 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    background-color: #fafafa;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.container {
+    width: 400px;
+    background-color: #fff;
+    border: 1px solid #dbdbdb;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.prof {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+}
+
+#prof-text {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+}
+
 #prof-img {
     width: 32px;
     height: 32px;
-    border-radius: 50%;
     object-fit: cover;
+}
+
+#location {
+    font-size: x-small;
 }
 
 #main-img {
     width: 400px;
     height: 500px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    padding-left: 20px;
+    
 }
 
 #heart-img {
@@ -16,16 +61,52 @@
 }
 
 #message-img {
+    padding-left: 15px;
     width: 22px;
     height: auto;
 }
 
 #share-img {
+    padding-left: 15px;
     width: 22px;
     height: auto;
 }
 
 #mark-img {
+    padding-left: 220px;
     width: 18px;
     height: auto;
+}
+
+#heart-text {
+    padding-left: 8px;
+    font-size: small;
+}
+
+.heart {
+    font-size: small;
+    padding-top: 5px;
+    padding-left: 15px;
+    padding-bottom: 10px;
+}
+
+.text {
+    display: flex;
+    align-items: center;
+    font-size: small;
+    padding-left: 15px;
+    padding-bottom: 15px;
+}
+
+#main-text {
+    padding-left: 5px;
+}
+
+#plus {
+    padding-left: 5px;
+    color: gray;
+}
+
+div {
+    font-family: 'DM Sans', sans-serif;
 }
