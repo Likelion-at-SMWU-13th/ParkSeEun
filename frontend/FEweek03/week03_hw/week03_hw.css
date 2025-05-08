@@ -1,0 +1,32 @@
+body {
+    background-color: rgba(244, 244, 244, 0.373);
+}
+#name-input {
+    margin-top: 20px;
+    margin-left: 20px;
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 0.8rem;
+    outline: none;
+  }
+  #srh-btn {
+    padding: 9px 15px;
+    background-color: #f0873e;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 0.8rem;
+    cursor: pointer;
+  }
+  .song-box {
+    margin-top: 20px;
+    margin-left: 20px;
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+  }
