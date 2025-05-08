@@ -26,7 +26,43 @@ body {
     margin-top: 20px;
     margin-left: 20px;
     flex-grow: 1;
-    padding: 10px;
+    padding: 20px;
     border: 1px solid #ddd;
     border-radius: 10px;
+    background-color: white;
   }
+
+  .info-box {
+    display: flex;
+    position: relative;
+  }
+
+  .second {
+    position: absolute;
+    left: 50%;
+  }
+
+  .song-title {
+    margin: 0;
+    font-size: 17px;
+  }
+
+  .song-singer{
+    margin-top: 10px;
+    font-size: 12px;
+    font-weight: 500;
+  }
+
+  .song-info {
+    margin: 0;
+    padding-top: 7px;
+    font-size: 12px;
+  }
+
+  .info-label {
+    font-size: 12px;
+    font-weight: 500;
+    color: #7a7a7a;
+    padding-right: 50px;
+  }
+

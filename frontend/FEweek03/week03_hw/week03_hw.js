@@ -14,18 +14,26 @@ async function fetchSong(keyword) {
         const songList = await response.json();
         const container = document.getElementById("songlistContainar");
         
+        container.innerHTML = '';
+
         songList.forEach((song) => {
             const list = document.createElement("div");
             list.className = "list"
 
             list.innerHTML = `
             <div class="song-box">
-            <h5 class="song-title">${song.title}</h5>
-            <h6 class="song-singer">${song.singer}</h6>
-            <p class="song-no">${song.no}</p>
-            <p class="song-composer">${song.composer}</p>
-            <p class="song-lyricist">${song.lyricist}</p>
-            <p class="song-release">${song.release}</p>
+            <h4 class="song-title">${song.title}</h4>
+            <p class="song-singer">${song.singer}</p>
+            <div class="info-box">
+                <div>
+                   <div class="song-info"><span class="info-label">번호</span><span>${song.no}</span></div>
+                   <div class="song-info"><span class="info-label">작사</span><span>${song.composer}</span></div>
+                </div>
+                <div class="second">
+                  <div class="song-info"><span class="info-label">작곡</span><span>&nbsp;&nbsp;&nbsp;${song.lyricist}</span></div>
+                  <div class="song-info"><span class="info-label">발매일</span><span>${song.release}</span></div>
+                </div>
+            </div>
             </div>`;
             container.appendChild(list);
         });
