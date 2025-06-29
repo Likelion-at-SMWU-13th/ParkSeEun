@@ -1,12 +1,13 @@
 import React from "react";
+import "./Song.css";
 
 const Song = ({ song }) => {
   const { rank, title, artist, album, poster, duration } = song;
 
   return (
-    <div>
+    <div class="song-box">
       <img src={poster} alt={title} />
-      <div>
+      <div class="song-info">
         <h2>
           {rank}. {title}
         </h2>

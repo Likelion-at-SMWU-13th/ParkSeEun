@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Song from "./Song";
+import "./Song.css";
 
 const Melon = () => {
   const [melon, setMelon] = useState([]);
@@ -26,8 +27,9 @@ const Melon = () => {
   };
 
   return (
-    <div>
-      <h3>멜론차트</h3>
+    <div className="container">
+      <img src="src\assets\Logo.png" id="logo" />
+      <h3>멜론차트 TOP 10</h3>
       <button onClick={sortByRank}>
         {isDesc ? "랭크 내림차순" : "랭크 오름차순"}
       </button>
