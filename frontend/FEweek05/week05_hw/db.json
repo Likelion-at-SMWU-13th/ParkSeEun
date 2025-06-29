@@ -1,0 +1,74 @@
+{
+  "melon": [
+    {
+      "rank": 1,
+      "title": "FAMOUS",
+      "artist": "ALLDAY PROJECT",
+      "album": "FAMOUS",
+      "duration": "3:01"
+    },
+    {
+      "rank": 2,
+      "title": "Dirty Work",
+      "artist": "aespa",
+      "album": "Dirty Work",
+      "duration": "3:01"
+    },
+    {
+      "rank": 3,
+      "title": "너에게 닿기를",
+      "artist": "10CM",
+      "album": "너에게 닿기를",
+      "duration": "2:39"
+    },
+    {
+      "rank": 4,
+      "title": "Drowning",
+      "artist": "WOODZ",
+      "album": "Drowning",
+      "duration": "4:05"
+    },
+    {
+      "rank": 5,
+      "title": "시작의 아이 ハジマリのコ (Starting With You)",
+      "artist": "마크툽 (MAKTUB)",
+      "album": "시작의 아이",
+      "duration": "4:17"
+    },
+    {
+      "rank": 6,
+      "title": "모르시나요(PROD.로코베리)",
+      "artist": "조째즈",
+      "album": "모르시나요",
+      "duration": "5:02"
+    },
+    {
+      "rank": 7,
+      "title": "Whiplash",
+      "artist": "aespa",
+      "album": "The 5th Mini Album",
+      "duration": "3:04"
+    },
+    {
+      "rank": 8,
+      "title": "Never Ending Story",
+      "artist": "아이유",
+      "album": "꽃갈피 셋",
+      "duration": "3:45"
+    },
+    {
+      "rank": 9,
+      "title": "어제보다 슬픈 오늘",
+      "artist": "우디 (Woody)",
+      "album": "어제보다 슬픈 오늘",
+      "duration": "3:57"
+    },
+    {
+      "rank": 10,
+      "title": "Ruby",
+      "artist": "like JENNIE",
+      "album": "제니 (JENNIE)",
+      "duration": "2:04"
+    }
+  ]
+}
