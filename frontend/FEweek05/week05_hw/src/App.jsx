@@ -1,8 +1,13 @@
 import React from "react";
 import "./App.css";
+import Melon from "./components/Melon";
 
 function App() {
-  return <></>;
+  return (
+    <>
+      <Melon></Melon>
+    </>
+  );
 }
 
 export default App;
