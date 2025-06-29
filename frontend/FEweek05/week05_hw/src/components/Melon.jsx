@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import Song from "./Song";
 
 const Melon = () => {
   const [melon, setMelon] = useState([]);
@@ -19,15 +20,8 @@ const Melon = () => {
     <div>
       <h3>멜론차트</h3>
       <div>
-        {melon.map((melons) => (
-          <div key={melons.rank}>
-            <img src={melons.poster} alt={melons.title} />
-            <div>
-              <h2>{melons.title}</h2>
-              <p>{melons.artist}</p>
-              <p>{melons.album}</p>
-            </div>
-          </div>
+        {melon.map((song) => (
+          <Song key={song.rank} song={song} />
         ))}
       </div>
     </div>
