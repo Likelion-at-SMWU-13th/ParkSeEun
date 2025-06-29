@@ -4,6 +4,7 @@ import Song from "./Song";
 
 const Melon = () => {
   const [melon, setMelon] = useState([]);
+  const [isDesc, setDesc] = useState(true);
 
   useEffect(() => {
     axios
@@ -16,9 +17,21 @@ const Melon = () => {
       });
   }, []);
 
+  const sortByRank = () => {
+    const sorted = [...melon].sort((a, b) =>
+      isDesc ? b.rank - a.rank : a.rank - b.rank
+    );
+    setMelon(sorted);
+    setDesc(!isDesc);
+  };
+
   return (
     <div>
       <h3>멜론차트</h3>
+      <button onClick={sortByRank}>
+        {isDesc ? "랭크 내림차순" : "랭크 오름차순"}
+      </button>
+
       <div>
         {melon.map((song) => (
           <Song key={song.rank} song={song} />
