@@ -1,4 +1,4 @@
-import { useState, useRef } from "react"; // ① useRef import 하기
+import { useState, useRef, useCallback } from "react"; // ① useRef import 하기
 
 const QuizApp = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -15,7 +15,7 @@ const QuizApp = () => {
     { question: "DOM에 직접 접근할 때 사용하는 Hook은?", answer: "useRef" },
   ];
 
-  const handleSubmit = () => {
+  const handleSubmit = useCallback(() => {
     const newAnswers = [...answers];
     newAnswers[currentQuestion] = userAnswer;
     setAnswers(newAnswers);
@@ -25,15 +25,15 @@ const QuizApp = () => {
       setUserAnswer("");
       setTimeout(() => inputRef.current?.focus(), 0);
     }
-  };
+  }, [currentQuestion, userAnswer, answers, questions.length]);
 
-  const handleReset = () => {
+  const handleReset = useCallback(() => {
     setCurrentQuestion(0);
     setUserAnswer("");
     setAnswers([]);
     inputRef.current.value = "";
     inputRef.current.focus();
-  };
+  }, []);
 
   return (
     <div className="quiz-container">
