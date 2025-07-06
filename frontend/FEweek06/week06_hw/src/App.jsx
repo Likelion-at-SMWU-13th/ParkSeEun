@@ -5,7 +5,7 @@ import Melon from "./components/Melon";
 function App() {
   return (
     <>
-      <Melon></Melon>
+      <Melon />
     </>
   );
 }
