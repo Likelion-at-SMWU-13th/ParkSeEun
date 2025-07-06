@@ -6,6 +6,7 @@ import "./Song.css";
 const Melon = () => {
   const [melon, setMelon] = useState([]);
   const [isDesc, setDesc] = useState(true);
+  const [search, setSearch] = useState("");
 
   useEffect(() => {
     axios
@@ -26,16 +27,25 @@ const Melon = () => {
     setDesc(!isDesc);
   };
 
+  const filterSong = melon.filter((song) => song.title.includes(search));
+
   return (
     <div className="container">
       <img src="src\assets\Logo.png" id="logo" />
-      <h3>멜론차트 TOP 10</h3>
+      <h3>멜론차트 TOP 20</h3>
+      <input
+        type="text"
+        placeholder="답을 입력하세요"
+        className="answer-input"
+        value={search}
+        onChange={(e) => setSearch(e.target.value)}
+      />
       <button onClick={sortByRank}>
         {isDesc ? "랭크 내림차순" : "랭크 오름차순"}
       </button>
 
       <div>
-        {melon.map((song) => (
+        {filterSong.map((song) => (
           <Song key={song.rank} song={song} />
         ))}
       </div>

@@ -6,11 +6,10 @@ const Song = ({ song }) => {
 
   return (
     <div class="song-box">
+      <h1>{rank}</h1>
       <img src={poster} alt={title} />
       <div class="song-info">
-        <h2>
-          {rank}. {title}
-        </h2>
+        <h2>{title}</h2>
         <p>{artist}</p>
         <p>{album}</p>
         {duration && <p>{duration}</p>}
