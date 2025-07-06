@@ -1,12 +1,14 @@
-import React from "react";
+import { useLocation, Link } from "react-router-dom";
 import "./Song.css";
-import { Link } from "react-router-dom";
 
-const Song = ({ song }) => {
+const Info = () => {
+  const location = useLocation();
+  const song = location.state?.song;
+
   const { rank, title, artist, album, poster, duration } = song;
 
   return (
-    <Link to="/info" state={{ song }} className="link-btn">
+    <div>
       <div className="song-box">
         <h1>{rank}</h1>
         <img src={poster} alt={title} />
@@ -17,8 +19,13 @@ const Song = ({ song }) => {
           {duration && <p>{duration}</p>}
         </div>
       </div>
-    </Link>
+      <div>
+        <Link to="/" className="link-btn">
+          X
+        </Link>
+      </div>
+    </div>
   );
 };
 
-export default Song;
+export default Info;

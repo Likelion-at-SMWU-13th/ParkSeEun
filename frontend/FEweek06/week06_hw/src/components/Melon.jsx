@@ -27,7 +27,9 @@ const Melon = () => {
     setDesc(!isDesc);
   };
 
-  const filterSong = melon.filter((song) => song.title.includes(search));
+  const filterSong = melon.filter((song) =>
+    song.title.toLowerCase().includes(search.toLowerCase())
+  );
 
   return (
     <div className="container">
