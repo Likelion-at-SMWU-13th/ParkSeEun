@@ -5,25 +5,23 @@ const Info = () => {
   const location = useLocation();
   const song = location.state?.song;
 
-  const { rank, title, artist, album, poster, duration } = song;
+  const { title, artist, album, poster, duration } = song;
 
   return (
-    <div>
-      <div className="song-box">
-        <h1>{rank}</h1>
-        <img src={poster} alt={title} />
-        <div className="song-info">
-          <h2>{title}</h2>
-          <p>{artist}</p>
-          <p>{album}</p>
-          {duration && <p>{duration}</p>}
+    <div className="container">
+      <div className="song-box2">
+        <img src="src\assets\Logo2.png" id="logo2" />
+        <img id="info-img" src={poster} alt={title} />
+        <div className="song-info2">
+          <h2 className="info-title">{title}</h2>
+          <p className="info-p">{artist}</p>
+          <p className="info-p">{album}</p>
+          {duration && <p className="info-p">{duration}</p>}
         </div>
       </div>
-      <div>
-        <Link to="/" className="link-btn">
-          X
-        </Link>
-      </div>
+      <Link to="/" className="link-btn">
+        <button className="back-btn">뒤로 가기</button>
+      </Link>
     </div>
   );
 };

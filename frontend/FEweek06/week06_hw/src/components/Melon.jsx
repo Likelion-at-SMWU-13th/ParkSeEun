@@ -35,17 +35,18 @@ const Melon = () => {
     <div className="container">
       <img src="src\assets\Logo.png" id="logo" />
       <h3>멜론차트 TOP 20</h3>
-      <input
-        type="text"
-        placeholder="답을 입력하세요"
-        className="answer-input"
-        value={search}
-        onChange={(e) => setSearch(e.target.value)}
-      />
-      <button onClick={sortByRank}>
-        {isDesc ? "랭크 내림차순" : "랭크 오름차순"}
-      </button>
-
+      <div className="search-box">
+        <input
+          type="text"
+          placeholder="검색어를 입력하세요"
+          className="input"
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+        />
+        <button onClick={sortByRank}>
+          {isDesc ? "랭크 내림차순" : "랭크 오름차순"}
+        </button>
+      </div>
       <div>
         {filterSong.map((song) => (
           <Song key={song.rank} song={song} />

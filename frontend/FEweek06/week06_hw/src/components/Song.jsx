@@ -14,7 +14,7 @@ const Song = ({ song }) => {
           <h2>{title}</h2>
           <p>{artist}</p>
           <p>{album}</p>
-          {duration && <p>{duration}</p>}
+          {duration && <p className="song-du">{duration}</p>}
         </div>
       </div>
     </Link>
