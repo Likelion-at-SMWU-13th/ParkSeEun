@@ -12,7 +12,7 @@ const Comment = () => {
       .get("http://127.0.0.1:8000/entries/")
       .then((response) => {
         console.log(response);
-        setComments(response.data);
+        setComments(response.data.reverse());
       })
       .catch((error) => {
         console.log(error);
