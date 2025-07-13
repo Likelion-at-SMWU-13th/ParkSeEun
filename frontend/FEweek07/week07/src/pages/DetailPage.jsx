@@ -21,9 +21,24 @@ const DetailPage = () => {
       });
   };
 
+  const delDetail = (id) => {
+    console.log(id);
+    axios
+      .delete(`http://127.0.0.1:8000/entries/${id}/`)
+      .then(() => {
+        alert("게시글이 삭제되었습니다.");
+        navigate("/");
+      })
+      .catch((error) => {
+        console.log(error);
+        alert("게시글 삭제에 실패했습니다.");
+      });
+  };
+
   useEffect(() => {
     getDetail(id);
   }, [id]);
+
   return (
     <Wrapper>
       <Button txt="게시글 작성하기" onBtnClick={() => navigate("/write")} />
@@ -33,7 +48,11 @@ const DetailPage = () => {
         <Comment>{detail.comment}</Comment>
         <BtnWrapper>
           <Button txt="수정" fontSize="1.875rem" />
-          <Button txt="삭제" fontSize="1.875rem" />
+          <Button
+            txt="삭제"
+            onBtnClick={() => delDetail(id)}
+            fontSize="1.875rem"
+          />
         </BtnWrapper>
       </DetailWrapper>
     </Wrapper>
