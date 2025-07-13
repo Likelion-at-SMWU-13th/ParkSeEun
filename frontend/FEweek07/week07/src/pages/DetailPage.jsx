@@ -47,7 +47,11 @@ const DetailPage = () => {
         <Time>{detail.timestamp}</Time>
         <Comment>{detail.comment}</Comment>
         <BtnWrapper>
-          <Button txt="수정" fontSize="1.875rem" />
+          <Button
+            txt="수정"
+            onBtnClick={() => navigate(`/update/${detail.id}`)}
+            fontSize="1.875rem"
+          />
           <Button
             txt="삭제"
             onBtnClick={() => delDetail(id)}
