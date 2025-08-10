@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import ReactMarkdown from "react-markdown";
 
 const GPT = ({ quest }) => {
   const [response, setResponse] = useState("");
@@ -31,7 +32,7 @@ const GPT = ({ quest }) => {
 
   return (
     <div>
-      <p>{response}</p>
+      <ReactMarkdown>{response}</ReactMarkdown>
     </div>
   );
 };
