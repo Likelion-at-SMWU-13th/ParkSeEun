@@ -1,7 +1,12 @@
+import GPT from "./components/GPT.jsx";
 import "./App.css";
 
 function App() {
-  return <></>;
+  return (
+    <>
+      <GPT />
+    </>
+  );
 }
 
 export default App;
