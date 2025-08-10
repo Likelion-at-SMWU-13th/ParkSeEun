@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
+import * as S from "./styled.js";
 
 const GPT = ({ quest }) => {
   const [response, setResponse] = useState("");
@@ -31,9 +32,9 @@ const GPT = ({ quest }) => {
   }, [quest, HF_TOKEN]);
 
   return (
-    <div>
+    <S.Ansbox>
       <ReactMarkdown>{response}</ReactMarkdown>
-    </div>
+    </S.Ansbox>
   );
 };
 
