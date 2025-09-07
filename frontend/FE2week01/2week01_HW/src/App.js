@@ -1,21 +1,29 @@
-import { useContext } from "react";
 import Content from "./components/Content";
 import { styled } from "styled-components";
-import ContentContext from "./contexts/ContentContext";
+import ContentProvider from "./contexts/ContentContext";
+import { useContent } from "./contexts/ContentContext";
 
 function App() {
-  const part = useContext(ContentContext);
   return (
-    <ContentContext.Provider value={""}>
+    <ContentProvider>
       <Wrapper>
         <div className="title">
-          숙명여대 멋쟁이사자처럼 <span>{part}</span> 파트 구성원
+          <Title />
         </div>
         <Content />
       </Wrapper>
-    </ContentContext.Provider>
+    </ContentProvider>
   );
 }
+
+const Title = () => {
+  const { part } = useContent();
+  return (
+    <>
+      숙명여대 멋쟁이사자처럼 <span>{part}</span> 파트 구성원
+    </>
+  );
+};
 
 export default App;
 

@@ -1,5 +1,20 @@
-import { createContext } from "react";
+import { createContext, useContext, useState } from "react";
 
-const ContentContext = createContext();
+const ContentContext = createContext({
+  part: "",
+  setPart: () => {},
+});
 
-export default ContentContext;
+export const ContentProvider = ({ children }) => {
+  const [part, setPart] = useState("");
+
+  return (
+    <ContentContext.Provider value={{ part, setPart }}>
+      {children}
+    </ContentContext.Provider>
+  );
+};
+
+export const useContent = () => useContext(ContentContext);
+
+export default ContentProvider;

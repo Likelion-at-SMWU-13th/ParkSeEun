@@ -1,11 +1,10 @@
-import { useContext } from "react";
 import styled from "styled-components";
 import Left from "./Left";
 import Right from "./Right";
-import ContentContext from "../contexts/ContentContext";
+import { useContent } from "../contexts/ContentContext";
 
 const Content = () => {
-  const { part, setPart } = useContext(ContentContext);
+  const { part, setPart } = useContent();
   return (
     <Wrapper>
       <div className="content">

@@ -1,8 +1,10 @@
 import React from "react";
 import { styled } from "styled-components";
 import MemberList from "./MemberList";
+import { useContent } from "../contexts/ContentContext";
 
-const Right = ({ part }) => {
+const Right = () => {
+  const { part } = useContent();
   return (
     <Wrapper>
       <MemberList part={part} />
