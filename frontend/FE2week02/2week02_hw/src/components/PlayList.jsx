@@ -8,7 +8,7 @@ const PlayList = () => {
     <div className="container2">
       <h2 className="play">내 플레이리스트</h2>
       {playlist.map((song) => (
-        <PlayListItem key={song.rank} song={song} />
+        <PlayListItem key={song.id} song={song} />
       ))}
     </div>
   );
