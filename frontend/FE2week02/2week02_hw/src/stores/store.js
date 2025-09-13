@@ -6,7 +6,7 @@ const useMusicStore = create((set) => ({
     const title = song.title.trim();
     if (!title) return;
     set((state) => ({
-      songs: [...state.songs, { id: Date.now(), song, liked: false }],
+      songs: [...state.songs, { ...song, id: Date.now(), liked: false }],
     }));
   },
   removeSong: (id) =>
