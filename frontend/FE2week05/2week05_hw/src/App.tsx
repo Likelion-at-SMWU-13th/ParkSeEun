@@ -25,8 +25,12 @@ const WorldChampionTeam2025: LCKWorldChampionTeam = {
   titles: 5,
 };
 
-function App() {
+function printTeam(): void {
   console.log("2025 WorldChampionShip 진출팀:", WorldChampionTeam2025);
+}
+
+function App() {
+  printTeam();
 }
 
 export default App;
