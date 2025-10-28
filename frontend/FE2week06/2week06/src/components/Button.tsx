@@ -3,8 +3,8 @@ import type { MouseEventHandler } from "react";
 
 interface ButtonProps {
   txt: string;
-  onBtnClick: MouseEventHandler<HTMLButtonElement>;
-  fontSize: string;
+  onBtnClick?: MouseEventHandler<HTMLButtonElement>;
+  fontSize?: string;
 }
 
 type ButtonContainerProps = {
